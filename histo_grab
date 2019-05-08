@@ -1,0 +1,4 @@
+#!/bin/sh
+HISTFILE=~/.bash_history
+set -o history
+history | tail -n 5 | cut -c 8- | rofi -dmenu -l 5 | sh | xclip
